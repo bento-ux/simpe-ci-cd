@@ -14,6 +14,12 @@ it('Call the /pong endpoint', async done => {
     expect(res.text).toBe('Pong!')
     done()
 })
+it('Call the /twitter endpoint', async done => {
+    const res = await request.get('/twitter')
+    expect(res.status).toBe(200)
+    expect(res.text).toBe('Hallo twitter!')
+    done()
+})
 it('Call the /hello/:name endpoint', async done => {
     const res = await request.get('/hello/Iqbal')
     expect(res.status).toBe(200)
