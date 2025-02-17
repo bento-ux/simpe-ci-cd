@@ -11,7 +11,7 @@ it('Call the / endpoint', async done => {
 it('Call the /pong endpoint', async done => {
     const res = await request.get('/ping')
     expect(res.status).toBe(200)
-    expect(res.text).toBe('Pong Ben!')
+    expect(res.text).toBe('Pong Bens!')
     done()
 })
 it('Call the /twitter endpoint', async done => {
